@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: white;
+            padding: 40px;
+            border: 1px solid #dbdbdb;
+            text-align: center;
+            width: 350px;
+        }
+        .login-container img {
+            width: 175px;
+            margin-bottom: 20px;
+        }
+        .login-container input[type="text"], 
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            background-color: #fafafa;
+        }
+        .login-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 20px 0;
+            border: none;
+            border-radius: 3px;
+            background-color: #0095f6;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .login-container p {
+            font-size: 14px;
+            color: #8e8e8e;
+        }
+        .login-container a {
+            color: #0095f6;
+            text-decoration: none;
+        }
+        .login-container .or-divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .login-container .or-divider::before, 
+        .login-container .or-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: #dbdbdb;
+        }
+        .login-container .or-divider::before {
+            margin-right: 10px;
+        }
+        .login-container .or-divider::after {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1024px-Instagram_logo.svg.png" alt="Instagram Logo">
+        <form id="loginForm">
+            <input type="text" id="email" placeholder="Phone number, username, or email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="submit" value="Log In">
+        </form>
+        <div class="or-divider">
+            <span>OR</span>
+        </div>
+        <p><a href="#">Forgot password?</a></p>
+    </div>
+
+    <script>
+        // JavaScript to handle form submission
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Get the values entered by the user
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // Display the values (for demonstration purposes)
+            alert('Email: ' + email + '\nPassword: ' + password);
+        });
+    </script>
+</body>
+</html>
